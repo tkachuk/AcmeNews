@@ -1,0 +1,29 @@
+Acme\NewsBundle\Entity\News:
+    type: entity
+    table: news
+    repositoryClass: Acme\NewsBundle\Entity\News\Repository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+            nullable: false
+        announce:
+            type: text
+            nullable: false
+        description:
+            type: text
+            nullable: false
+        isPublished:
+            type: boolean
+            column: is_published
+            nullable: false
+        date:
+            type: datetime
+            column: date
+    lifecycleCallbacks: {  }

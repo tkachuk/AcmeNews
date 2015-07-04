@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for entity in newsList %}
+        <div>
+            <div class="title">
+                <h3>{{ entity.title }}</h3>
+            </div>
+            <div class="date">
+                <b>{{ entity.date|date('Y-m-d')  }}</b>
+            </div>
+            <div class="description">
+                <p>{{ entity.announce }}  <a href="/news/{{ entity.id }}">read more</a></p>
+            </div><hr>
+        </div>
+    {% endfor %}
+{% endblock %}
