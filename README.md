@@ -14,5 +14,11 @@ Now, Composer will automatically download all required files, and install them
 ### 2. Create database (MySQL) ###
 
 ```sh
-$ php composer.phar install
+$ mysqladmin -u USER -pPASSWORD create NEWDATABASE
+```
+
+### 3. Restore data from dump ###
+
+```sh
+$ mysql -u USER -p NEWDATABASE < ./dump/news.sql
 ```
