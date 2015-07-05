@@ -22,3 +22,25 @@ $ mysqladmin -u USER -pPASSWORD create NEWDATABASE
 ```sh
 $ mysql -u USER -p NEWDATABASE < ./dump/news.sql
 ```
+
+## Usage ##
+
+### News list ###
+```sh
+/news
+```
+
+### News list with page number ###
+```shnews?page=1&per_page=1
+/news?page=1&per_page=3
+```
+
+### News item ###
+```sh
+/news/3
+```
+
+### News list(XML) ###
+```sh
+/news.xml
+```
