@@ -1,3 +1,7 @@
+home_page:
+    path:     /
+    defaults: { _controller: AcmeNewsBundle:Index:index }
+
 acme_news_item:
     path:     /news/{id}
     defaults: { _controller: AcmeNewsBundle:News:getNews }

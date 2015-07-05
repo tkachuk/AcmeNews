@@ -1,5 +1,4 @@
 <?php
-
 namespace Acme\NewsBundle\Controller;
 
 use Doctrine\ORM\EntityNotFoundException;
@@ -10,7 +9,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class NewsController extends Controller
 {
-
     /**
      * @param $id
      * @return \Symfony\Component\HttpFoundation\Response
@@ -23,7 +21,6 @@ class NewsController extends Controller
             'relatedItems' => $this->getRepository()->getRelatedNewsById($id)
         ));
     }
-
 
     /**
      * @param Request $request
@@ -65,6 +62,7 @@ class NewsController extends Controller
         $response = new Response();
         $response->setContent($rootNode->asXML());
         $response->headers->set('Content-Type', 'xml');
+
         return $response;
     }
 
@@ -91,5 +89,4 @@ class NewsController extends Controller
     {
         return $this->getDoctrine()->getRepository('AcmeNewsBundle:News');
     }
-
 }

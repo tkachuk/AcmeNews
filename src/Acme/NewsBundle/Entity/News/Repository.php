@@ -1,5 +1,4 @@
 <?php
-
 namespace Acme\NewsBundle\Entity\News;
 
 use Doctrine\ORM\EntityRepository;
@@ -33,6 +32,11 @@ class Repository extends EntityRepository
         return $queryBuilder;
     }
 
+    /**
+     * @param $id
+     * @param int $limit
+     * @return array
+     */
     public function getRelatedNewsById($id, $limit = 3)
     {
         return $this->createQueryBuilder('n')
@@ -40,6 +44,7 @@ class Repository extends EntityRepository
             ->andWhere('n.isPublished = (?2)')
             ->setParameter(1, $id)
             ->setParameter(2, 1)
+            ->orderBy('n.date', 'DESC')
             ->setMaxResults($limit)
             ->getQuery()
             ->getResult();
