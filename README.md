@@ -30,12 +30,12 @@ $ mysql -u USER -p NEWDATABASE < ./dump/news.sql
 /news
 ```
 
-### News list with page number ###
+#### News list with page number ####
 ```shnews?page=1&per_page=1
 /news?page=1&per_page=3
 ```
 
-### News item ###
+#### News item ####
 ```sh
 /news/3
 ```
