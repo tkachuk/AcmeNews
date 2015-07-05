@@ -25,7 +25,7 @@ $ mysql -u USER -p NEWDATABASE < ./dump/news.sql
 
 ## Usage ##
 
-### News list ###
+#### News list ####
 ```sh
 /news
 ```
